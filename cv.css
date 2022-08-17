@@ -1,0 +1,240 @@
+/*GENERAL*********************************/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+    background-color: white;
+    --main-color: rgb(151, 21, 21);
+    --shadow-color: #333;
+    --border-color: #bbb;
+    --shady-color: #4f4f4f;
+    --button-color: rgba(221, 171, 130, 0.37);
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*HEADER & FOOTER*********************************/
+
+header,
+footer {
+    width: 100%;
+    padding: 20px 0px;
+    background: var(--shady-color);
+    box-shadow: 0px 0px 5px var(--shadow-color);
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+    height: 120px;
+}
+
+header h1 {
+    color: var(--main-color);
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--shady-color);
+}
+
+footer p {
+    width: 90%;
+    margin: 0 auto;
+    color: var(--main-color);
+    text-align: center;
+}
+
+footer a {
+    color: var(--main-color);
+}
+
+/*SECTIONS*********************************/
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 30px auto;
+    box-shadow: 0px 0px 10px var(--shady-color);
+}
+
+section h2 {
+    margin: 20px 0;
+    width: 90%;
+}
+
+section>div {
+    width: 90%;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    border-radius: 50%;
+    margin-top: -80px;
+}
+
+.presentation {
+    border-bottom: 1px solid var(--border-color);
+    /***********/
+}
+
+.presentation a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: var(--main-color);
+    background-color: var(--button-color);
+    box-shadow: 0px 0px 2px var(--shadow-color);
+    border-radius: 2px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.contact-flex p:first-child {
+    flex: 0 0 40%;
+}
+
+.contact-flex p:last-child {
+    flex: 0 0 60%;
+}
+
+
+
+/***************************************************************************/
+
+.social {
+    display: flex;
+    flex-direction: column wrap;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+
+.social img {
+    display: flex;
+    flex-direction: column wrap;
+    width: 40px;
+    height: 40px;
+}
+
+/***************************************************************************/
+
+.experience {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.exp-logo {
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+
+.exp-info {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+
+.exp-description {
+    color: var(--main-color);
+}
+
+.experience img {
+    width: 100%;
+}
+
+.experience h3 {
+    font-size: 1.2em;
+}
+
+.experience h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+/***************************************************************************/
+
+
+.competence {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comp-logo {
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+
+.comp-info {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+
+.comp-description {
+    color: var(--main-color);
+}
+
+.competence img {
+    width: 100%;
+}
+
+/***************************************************************************/
+
+.hobby {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.hobby-description {
+    color: var(--main-color);
+}
+
+.hobby img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px var(--shadow-color);
+}
