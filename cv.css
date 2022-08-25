@@ -11,6 +11,7 @@
     --m-sombre: #4f4f4f;
     --m-noir: #000;
     --m-button: rgba(221, 171, 130, 0.37);
+    --m-blue: blue;
 
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
@@ -30,6 +31,8 @@ a {
     text-decoration: none;
     color: var(--m-noir);
 }
+
+
 
 /*HEADER & FOOTER*********************************/
 
@@ -128,6 +131,9 @@ section>div {
     flex: 0 0 60%;
 }
 
+.mailto_ {
+    color: var(--m-blue);
+}
 
 
 /***************************************************************************/
@@ -227,9 +233,10 @@ section>div {
     max-width: 100px;
 }
 
+
 .comp-info {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     flex: 0 0 70%;
     margin-left: auto;
 }
@@ -314,3 +321,22 @@ section>div {
     min-height: 30px;
     color: var(--m-grenat);
 }
+
+.m-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.m-tapis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.m-carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30px;
+  }
