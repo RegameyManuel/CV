@@ -1,7 +1,10 @@
 /*GENERAL*********************************/
 
+
+
+
 * {
-    --m-blanc: white;
+    --m-blanc : white;
     --m-grenat: rgb(151, 21, 21);
     --m-ombre: #333;
     --m-gris: #bbb;
@@ -16,6 +19,7 @@
     text-align: justify;
     box-sizing: border-box;
     background-color: var(--m-blanc);
+
 }
 
 p {
@@ -27,6 +31,8 @@ a {
     text-decoration: none;
     color: var(--m-noir);
 }
+
+
 
 /*HEADER & FOOTER*********************************/
 
@@ -129,6 +135,7 @@ section>div {
     color: var(--m-blue);
 }
 
+
 /***************************************************************************/
 
 .social {
@@ -145,7 +152,7 @@ section>div {
     width: 40px;
     height: 40px;
     flex: 0 0 25%;
-
+    
 }
 
 .social img:hover {
@@ -153,6 +160,7 @@ section>div {
     height: 50px;
     -webkit-transition: all 0.5s ease;
 }
+
 
 /***************************************************************************/
 
@@ -202,45 +210,30 @@ section>div {
     font-weight: normal;
 }
 
+
 /***************************************************************************/
 
 .competence {
     display: flex;
     flex-direction: row wrap;
     justify-content: space-around;
-    text-align :center;
     margin: 10px auto 0px auto;
-    /*height: 80px;*/
+    height: 80px;
     width: 60%;
     position: static;
 
-}
-
-.competence:last-child {
-    border-bottom: none;
-}
-
-.comp-logo {
-    flex: 0 0 25%;
-    max-width: 100px;
-}
-
-.comp-info {
     display: flex;
-    flex-flow: column wrap;
-    flex: 0 0 70%;
-    margin-left: auto;
-}
-
-.comp-description {
-    color: var(--m-grenat);
+    flex-flow: row wrap;
+    border-bottom: 1px solid var(--m-gris);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .competence img {
     width: 50px;
     height: 50px;
     flex: 0 0 25%;
-
+    
 }
 
 .competence img:hover {
@@ -249,40 +242,40 @@ section>div {
     -webkit-transition: all 0.5s ease;
 }
 
+
 .comp-logo {
     flex: 0 0 25%;
     max-width: 50px;
 }
 
-/***************************************************************************/
 
-.grid-container {
+.comp-info {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 70%;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.comp-description {
+    color: var(--m-grenat);
+}
+
+
+.grid-container{
+    width: 80%;
     display: grid;
-    
-    gap: 5px;
-    justify-items: center;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 800px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .grid-container {
-        gap: 5px;
-    }
+    grid-template-columns: repeat(3,1fr);
   }
   
-  .grid-item {
-    text-align: center;
-    border: black 0px solid;
-    width: 100px;
-    height: 100px;
-    border-radius: 20%;
+  .grid-item{
+    border: none;
+    padding: 30px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
   }
+ 
 
 /***************************************************************************/
 
@@ -292,12 +285,16 @@ section>div {
     flex-flow: column wrap;
     align-items: center;
     margin-bottom: 10px;
-    column-gap: 10px;
 }
 
 
 .hobby-description {
     color: var(--m-grenat);
+    display: none;
+}
+
+.hobby :hover + .hobby-description{
+    display: block;
 }
 
 .morph img {
@@ -324,7 +321,7 @@ section>div {
 .tooltip {
     position: relative;
     display: inline-block;
-
+    
 }
 
 .tooltip .tooltiptext {
@@ -351,39 +348,23 @@ section>div {
     color: var(--m-grenat);
 }
 
-/***************************************************************************/
-
-.button {
-    background-color: var(--m-button);
-    border: none;
-    border-radius: 12px;
-    color: var(--m-grenat);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    width: 200px;
-    height: 60px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    box-shadow: 0px 0px 2px var(--m-ombre);
+/*
+.m-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  @media screen and (min-width: 800px) {
-    .button {
-        width: 200px;
-    }
+.m-tapis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  @media screen and (max-width: 800px) {
-    .button {
-        width: 150px;
-    }
+.m-carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30px;
   }
-  
-  
-  .button1:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+  */
