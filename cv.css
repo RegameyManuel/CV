@@ -62,6 +62,8 @@ footer a {
     font-size: 1em;
 }
 
+
+
 /*SECTIONS*********************************/
 
 section {
@@ -187,6 +189,7 @@ section>div {
 .experience img {
     width: 100%;
 }
+
 
 .experience:hover img {
     width: 150%;
