@@ -1,4 +1,4 @@
-/*GENERAL*********************************/
+/* GENERAL *********************************/
 
 * {
     --m-blanc: white;
@@ -9,13 +9,14 @@
     --m-noir: #000;
     --m-button: rgba(221, 171, 130, 0.37);
     --m-blue: blue;
-
+    --m-background: #f5f5f5; /* Couleur de fond adoucie */
+    
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     text-align: justify;
     box-sizing: border-box;
-    background-color: var(--m-blanc);
+    background-color: var(--m-background);
 }
 
 p {
@@ -28,25 +29,26 @@ a {
     color: var(--m-noir);
 }
 
-/*HEADER & FOOTER*********************************/
+/* HEADER & FOOTER *********************************/
 
 header,
 footer {
     width: 100%;
-    padding: 20px 0px;
+    padding: 15px 0;
     background: var(--m-sombre);
-    box-shadow: 0px 0px 5px var(--m-ombre);
+    box-shadow: 0 0 5px var(--m-ombre);
 }
 
 header {
     border-bottom: 1px solid var(--m-gris);
-    height: 120px;
+    height: 90px;
+    animation: fadeIn 1s ease-in;
 }
 
 header h1,
 footer p {
     color: var(--m-grenat);
-    font-size: 1.5em;
+    font-size: 1.8em;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -58,32 +60,31 @@ footer {
 }
 
 footer a {
-    color: var(--main-color);
+    color: var(--m-grenat);
     font-size: 1em;
 }
 
-
-
-/*SECTIONS*********************************/
+/* SECTIONS *********************************/
 
 section {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
-    padding-bottom: 20px;
+    width: 90%;
     margin: 30px auto;
+    padding: 20px;
+    background-color: var(--m-blanc);
+    border-radius: 10px;
     box-shadow: 0px 0px 10px var(--m-sombre);
 }
 
 section h2 {
     margin: 20px 0;
-    width: 90%;
+    width: 100%;
+    text-align: center;
 }
 
-section>div {
-    width: 90%;
-}
+/* PHOTO *********************************/
 
 .photo {
     text-align: center;
@@ -95,75 +96,48 @@ section>div {
     border: 3px solid var(--m-blanc);
     box-shadow: 0px 0px 10px var(--m-ombre);
     border-radius: 50%;
-    margin-top: -80px;
+    margin-top: -60px;
 }
 
-.presentation {
-    border-bottom: 1px solid var(--m-gris);
-}
-
-.presentation a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    margin: 10px auto 30px auto;
-    color: var(--m-grenat);
-    background-color: var(--m-button);
-    box-shadow: 0px 0px 2px var(--m-ombre);
-    border-radius: 2px;
-}
+/* CONTACT *********************************/
 
 .contact-flex {
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
-}
-
-.contact-flex p:first-child {
-    flex: 0 0 40%;
-}
-
-.contact-flex p:last-child {
-    flex: 0 0 60%;
+    gap: 10px;
 }
 
 .mailto_ {
     color: var(--m-blue);
 }
 
-/***************************************************************************/
+/* SOCIAL MEDIA *********************************/
 
 .social {
     display: flex;
-    flex-direction: row wrap;
-    justify-content: space-around;
-    margin: 10px auto 0px auto;
-    height: 40px;
-    width: 400px;
-    position: static;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
 }
 
 .social img {
     width: 40px;
     height: 40px;
-    flex: 0 0 25%;
-
+    transition: transform 0.3s ease;
 }
 
 .social img:hover {
-    width: 50px;
-    height: 50px;
-    -webkit-transition: all 0.5s ease;
+    transform: scale(1.2);
 }
 
-/***************************************************************************/
+/* EXPERIENCES *********************************/
 
 .experience {
     display: flex;
     flex-flow: row wrap;
     border-bottom: 1px solid var(--m-gris);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .experience:last-child {
@@ -171,29 +145,21 @@ section>div {
 }
 
 .exp-logo {
-    flex: 0 0 25%;
+    flex: 0 0 20%;
     max-width: 100px;
 }
 
 .exp-info {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 0 0 70%;
-    margin-left: auto;
-}
-
-.exp-description {
-    color: var(--m-grenat);
+    flex: 0 0 75%;
 }
 
 .experience img {
     width: 100%;
+    transition: transform 0.3s ease;
 }
 
-
 .experience:hover img {
-    width: 150%;
-    -webkit-transition: all 0.5s ease;
+    transform: scale(1.1);
 }
 
 .experience h3 {
@@ -205,124 +171,21 @@ section>div {
     font-weight: normal;
 }
 
-/***************************************************************************/
-
-.competence {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: space-around;
-    text-align: center;
-    margin: 10px auto 0px auto;
-    width: 60%;
-    position: static;
-}
-
-.competence:last-child {
-    border-bottom: none;
-}
-
-.comp-info {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 0 0 70%;
-    margin-left: auto;
-}
-
-.comp-description {
-    color: var(--m-grenat);
-}
-
-.competence img {
-    width: 80px;
-    height: 80px;
-    flex: 0 0 25%;
-}
-
-.competence img:hover {
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-transition: all 0.5s ease;
-}
-
-/***************************************************************************/
-
-.grid-container {
-    display: grid;
-    gap: 5px;
-    justify-items: center;
-    align-items: center;
-}
-
-@media screen and (min-width: 800px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .grid-container {
-        gap: 5px;
-    }
-}
-
-.grid-item {
-    text-align: center;
-    border: black 0px solid;
-    width: 100px;
-    height: 100px;
-    border-radius: 20%;
-}
-
-/***************************************************************************/
-
-.hobby {
-    flex: 0 1 50%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    margin-bottom: 10px;
-    column-gap: 10px;
-}
-
-.hobby-description {
-    color: var(--m-grenat);
-}
-
-.morph img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--m-ombre);
-    -webkit-filter: grayscale(0) blur(0px) sepia(100%);
-    filter: grayscale(0) blur(0px) sepia(100%);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.morph :hover img {
-    width: 300px;
-    height: 300px;
-    -webkit-filter: grayscale(0) blur(0px) sepia(0%);
-    filter: grayscale(0) blur(0px) sepia(0%);
-    border-radius: 0%;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
+/* TOOLTIP *********************************/
 
 .tooltip {
     position: relative;
     display: inline-block;
-
 }
 
 .tooltip .tooltiptext {
-    max-width: 1000px;
-    padding: 15px;
-    min-height: 30px;
+    max-width: 800px;
+    padding: 10px;
     background: var(--m-blanc);
     visibility: hidden;
     border: 1px solid var(--m-gris);
-    color: var(--m-blanc);
-    text-align: center;
+    color: var(--m-sombre);
+    text-align: left;
     border-radius: 6px;
     position: absolute;
     z-index: 1;
@@ -330,50 +193,119 @@ section>div {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-    -webkit-transition: all 0.5s ease;
-    max-width: 1000px;
-    padding: 15px;
-    min-height: 30px;
-    color: var(--m-grenat);
 }
 
-/***************************************************************************/
-
-@media screen and (min-width: 800px) {
-    .button {
-        background-color: var(--m-button);
-        border: none;
-        border-radius: 12px;
-        color: var(--m-grenat);
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        width: 200px;
-        height: 60px;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-        box-shadow: 0px 0px 2px var(--m-ombre);
+/* MOBILE TOOLTIP FIX */
+@media (max-width: 800px) {
+    .tooltip .tooltiptext {
+        visibility: visible;
+        position: relative;
+        display: block;
+        padding: 10px;
     }
 }
 
-@media screen and (max-width: 800px) {
-    .button {
-        background-color: var(--m-button);
-        border: none;
-        border-radius: 12px;
-        color: var(--m-grenat);
-        padding: 8px 16px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 12px;
-        width: 100px;
-        height: 40px;
-    }
+/* COMPÉTENCES *********************************/
+
+.competence {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.comp-logo img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.comp-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* BOUTONS *********************************/
+
+.button1 {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .button1:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #343a40;
+    transform: scale(1.1);
+}
+
+/* HOBBIES *********************************/
+
+.hobby {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hobby-description {
+    color: var(--m-grenat);
+}
+
+/* ANIMATIONS *********************************/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* DARK MODE *********************************/
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --m-background: #1e1e1e;
+        --m-blanc: #222;
+        --m-gris: #444;
+        --m-sombre: #333;
+        --m-noir: #ddd;
+        --m-grenat: rgb(235, 64, 52);
+        --m-button: rgba(221, 171, 130, 0.5);
+        --m-blue: lightblue;
+    }
+
+    body {
+        background-color: var(--m-background);
+        color: var(--m-noir);
+    }
+
+    section {
+        background-color: var(--m-blanc);
+        box-shadow: 0px 0px 10px var(--m-gris);
+    }
+
+    header,
+    footer {
+        background: var(--m-sombre);
+        color: var(--m-grenat);
+    }
+
+    a {
+        color: var(--m-blue);
+    }
+
+    .button1 {
+        background-color: var(--m-grenat);
+        color: white;
+    }
+
+    .button1:hover {
+        background-color: #c0392b;
+    }
 }
